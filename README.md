@@ -1,4 +1,4 @@
-Agents for SkeekS CMS
+View for SkeekS CMS
 ===================================
 
 Installation

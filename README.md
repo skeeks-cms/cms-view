@@ -27,12 +27,31 @@ Configuration app
 [
     'view' =>
     [
-        'class' => 'skeeks\cms\view\ViewComponent'
+        'class' => 'skeeks\cms\view\ViewComponent',
+        /*'themes' =>
+        [
+            'one' =>
+            [
+                'class' => 'skeeks\cms\view\ThemeComponent',
+                'name'  => 'Default',
+                'pathMap'       =>
+                [
+                    '@app/views' =>
+                    [
+                        '@app/templates/one',
+                        '@app/templates/default',
+                    ],
+                ]
+            ],
+            'two' => []
+            //...
+        ]*/
     ],
 
     'viewSettings' =>
     [
-        'class' => 'skeeks\cms\view\ViewComponentSettings'
+        'class' => 'skeeks\cms\view\ViewComponentSettings',
+        /*'theme' => 'one'*/
     ],
 
     'i18n' => [

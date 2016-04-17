@@ -58,7 +58,7 @@ class ViewComponentSettings extends Component
 
         if ($themes)
         {
-            echo $form->field($this, 'theme')->listBox($themes);
+            echo $form->field($this, 'theme')->listBox($themes, ['size' => 1]);
         } else
         {
             echo \Yii::t('skeeks/view', 'There are no customizable themes in the project');

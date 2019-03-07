@@ -16,6 +16,7 @@ use yii\web\View;
  */
 class ViewComponent extends View
 {
+    public $isEnabled = true;
     /**
      * @var array Availables app themes
      */
@@ -37,6 +38,11 @@ class ViewComponent extends View
 
     public function init()
     {
+        if (!$this->isEnabled)
+        {
+            return parent::init();
+        }
+
         if (!$this->themes)
         {
             return parent::init();
@@ -52,12 +58,16 @@ class ViewComponent extends View
             return parent::init();
         }
 
-        if (!isset($themeData['class']))
+        /*if (!isset($themeData['class']))
         {
             $themeData['class'] = 'skeeks\cms\view\ThemeComponent';
+        }*/
+
+        if (!isset($themeData['themeConfig'])) {
+            return parent::init();
         }
 
-        $this->theme = $themeData;
+        $this->theme = $themeData['themeConfig'];
 
         return parent::init();
     }

@@ -15,4 +15,6 @@ use yii\base\Theme;
 class ThemeComponent extends Theme
 {
     public $name = "Theme name";
+
+    public $themeConfig = [];
 }
